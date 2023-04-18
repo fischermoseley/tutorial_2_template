@@ -5,7 +5,7 @@ module ssd(
     output reg[6:0]   cat_out,
     output reg[7:0]   an_out);
 
-    parameter COUNT_TO = 100000; 
+    parameter COUNT_TO = 1000;
     logic[7:0]      segment_state;
     logic[31:0]     segment_counter;
     logic [3:0]     routed_vals;
@@ -34,8 +34,8 @@ module ssd(
         if (rst_in) begin
             segment_state <= 8'b0000_0001;
             segment_counter <= 32'b0;
-        end 
-        
+        end
+
         else begin
             if (segment_counter == COUNT_TO) begin
                 segment_counter <= 32'd0;

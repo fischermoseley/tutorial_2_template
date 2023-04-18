@@ -3,6 +3,7 @@
 
 module top_level (
 	input wire clk,
+    input wire btnc,
 
     input wire ps2_clk,
     input wire ps2_data,
@@ -15,7 +16,7 @@ module top_level (
 	);
 
     logic clk_10mhz;
-    clk_gen_100_to_10 clk_gen(.clk_100mhz(clk), .clk_10mhz(clk_10mhz));
+    clk_gen_100_to_10_clk_wiz clk_gen(.clk_100mhz(clk), .clk_10mhz(clk_10mhz));
 
     manta manta_inst (
         .clk(clk_10mhz),
