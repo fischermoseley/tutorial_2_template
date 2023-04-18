@@ -1,0 +1,8 @@
+---
+cores:
+
+
+uart:
+  port: "auto"
+  baudrate: 115200
+  clock_freq: 10000000
