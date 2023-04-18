@@ -43,8 +43,6 @@ module top_level (
         .val_in(data),
         .cat_out(cat),
         .an_out(an));
-
-
 endmodule
 
 `default_nettype wire
